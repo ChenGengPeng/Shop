@@ -1,0 +1,212 @@
+.cont{
+    width: 950px;
+    height: 338px;
+    margin-left: 10%;
+    padding: 0;
+    position: relative;
+}
+.cont .wr #cont .slid{
+    padding: 5px;
+    width: 210px;
+    height: 300px;
+    position: absolute;
+    left: -6px;
+    top: 10px;
+}
+.cont .wr #cont .slid .shoplist{
+    margin: 0;
+    /*position: relative;*/
+    padding: 0;
+    text-align: left;
+    list-style: none;
+    display: inline-block;
+    width: 210px;
+    height: 300px;
+    background: #c81623;
+}
+.cont .wr #cont .slid .shoplist>li div h4{
+    color: #c81623;
+}
+.cont .wr #cont .slid .shoplist>li{
+    position: relative;
+    display: block;
+    width: 211px;
+    height: 34px;
+    color: white;
+}
+.cont .wr #cont .slid .shoplist>li:nth-child(n+10){
+    display: none;
+}
+.cont .wr #cont .slid .shoplist li .in{
+    position: absolute ;
+    display: none;
+    width: 400px;
+    height: 700px;
+    background: whitesmoke;
+}
+.cont .wr #cont .slid .shoplist>li .in .inul{
+     list-style: none;
+     display: inline-block;
+     width: 409px;
+     margin-left: -50px;
+ }
+.cont .wr #cont .slid .shoplist>li .in .inul li{
+    margin-bottom: 5px;
+    float: left;
+}
+.cont .wr #cont .slid .shoplist>li .in .inul li a{
+    margin-left: 5px;
+    text-decoration: none;
+    float: left;
+    color: #000;
+}
+.cont .wr #cont .slid .shoplist>li .in .inul li a:hover{
+    color: #c81623;
+}
+.cont .wr #cont .slid .shoplist>li .in .inul li:nth-child(even){
+    margin-left: 5px;
+}
+.cont .wr #cont .slid .shoplist>li .in .inul li:nth-child(odd){
+    float: left;
+    margin-left: 19px;
+    color: #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #CCCCCC;
+    width: 1px;
+    height: 19px;
+}
+.cont .wr #cont .slid .shoplist>li:hover{
+    background: white;
+    color: #000;
+}
+#open{
+    width: 16px;
+    height: 16px;
+    background: url("../img/down.png");
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 14px;
+    right: 5px;
+}
+#close{
+    display: none;
+    width: 16px;
+    height: 16px;
+    background: url("../img/down.png");
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 14px;
+    right: 5px;
+}
+.cont .wr #cont .lunbo{
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: 220px;
+    width: 635px;
+    height: 315px;
+}
+.cont .wr #cont .lunbo .imglist{
+    margin-top: 15px;
+    list-style: none;
+    width: 3375px;
+    height: 300px;
+}
+.cont .wr #cont .lunbo .imglist li{
+    margin-left: -40px;
+    margin-right: -5px;
+    width: 675px;
+    height: 300px;
+    display: inline-block;
+}
+.cont .wr #cont .lunbo .imglist>li>img{
+    margin: 0;
+    padding: 0;
+    width: 675px;
+    height: 300px;
+}
+.cont .wr #cont .selectli{
+    position: relative;
+}
+.cont .wr #cont .selectli .ullist{
+    padding-left: 200px;
+    position: absolute;
+    top: 276px;
+    left: 220px;
+    display: inline-block;
+    width: 435px;
+    height: 25px;
+    list-style: none;
+    background: pink;
+    opacity: 50%;
+}
+.cont .wr #cont .selectli .ullist>li{
+    margin-left: 40px;
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+}
+.cont .wr #cont .selectli .ullist>li:hover{
+   background: red;
+    opacity: 50%;
+}
+.new {
+    top: 192px;
+    right: 18%;
+    position: absolute;
+    width: 200px;
+    height: 299px;
+}
+.new h4{
+    margin-left: 30px;
+}
+.new ul{
+    padding: 0;
+    list-style: none;
+}
+.new ul>li{
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+.new a{
+    color: #CCCCCC;
+    text-decoration: none;
+}
+.new a:hover{
+    color: #c81623;
+}
+.recommend{
+    margin-left: 10%;
+    border-top: 1px #000 dashed;
+    width: 1116px;
+    height: 300px;
+    transition: all .4s;
+}
+.recommend .thinglist{
+    border: 1px solid #000;
+    /*opacity: 90%;*/
+    margin-left: 32px;
+    float: left;
+}
+.recommend .thinglist:hover{
+    transform: translateY(-10px);
+}
+.recommend .thinglist .imgp{
+    text-align: center;
+}
+.recommend .thinglist{
+    width: 147px;
+    height: 238px;
+    /*border: 1px solid red;*/
+}
+.recommend h2{
+    color: #c81623;
+}
+.recommend .thinglist img{
+    width: 100px;
+    height: 150px;
+}
+.recommend .thinglist h4{
+    color: #c81623;
+}

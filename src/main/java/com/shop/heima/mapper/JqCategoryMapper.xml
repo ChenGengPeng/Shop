@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.heima.dao.JqCategoryMapper">
+  <resultMap id="BaseResultMap" type="com.shop.heima.entity.JqCategory">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="is_parent" jdbcType="TINYINT" property="isParent" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="updated" jdbcType="TIMESTAMP" property="updated" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from jq_category
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.shop.heima.entity.JqCategory">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into jq_category (parent_id, `name`, `status`, 
+      sort, is_parent, created, 
+      updated)
+    values (#{parentId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{sort,jdbcType=INTEGER}, #{isParent,jdbcType=TINYINT}, #{created,jdbcType=TIMESTAMP}, 
+      #{updated,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shop.heima.entity.JqCategory">
+    update jq_category
+    <set>
+      <if test="parent_id != null">
+      parent_id = #{parentId,jdbcType=INTEGER},
+    </if>
+      <if test="`name` != null">
+        `name` = #{name,jdbcType=VARCHAR},
+    </if>
+      <if test="`status` != null">
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="sort != null">
+       sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="is_parent != null">
+        is_parent = #{isParent,jdbcType=TINYINT},
+      </if>
+      <if test="created != null">
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated  != null">
+        updated = #{updated,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, parent_id, `name`, `status`, sort, is_parent, created, updated
+    from jq_category
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, parent_id, `name`, `status`, sort, is_parent, created, updated
+    from jq_category
+  </select>
+</mapper>
